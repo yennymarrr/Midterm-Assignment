@@ -6,6 +6,7 @@
     <style>
         body {
             border: 5px solid black;
+            margin: 0; /* Remove default body margin */
         }
 
         header {
@@ -35,6 +36,7 @@
 
         nav li {
             margin-right: 15px;
+            position: relative; /* Added to make the position of the flyout relative to the list item */
         }
 
         nav a {
@@ -42,10 +44,34 @@
             color: pink;
             font-weight: bold;
             font-size: 16px;
+            position: relative; /* Added to make the position of the flyout relative to the link */
         }
 
         nav a:hover {
             color: pink;
+        }
+
+        /* Flyout menu styles */
+        nav .flyout {
+            display: none; /* Hide by default */
+            position: absolute;
+            top: 100%; /* Position below the link */
+            left: 0;
+            background-color: rgb(112, 98, 65);
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out; /* Add transition effect */
+        }
+
+        nav li:hover .flyout {
+            display: flex; /* Show when the parent list item is hovered */
+            flex-direction: column; /* Display items vertically */
+        }
+
+        .flyout a {
+            padding: 10px;
+            border-bottom: 1px solid white; /* Add border between menu items */
         }
 
         .hero-image {
@@ -117,7 +143,14 @@
             <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Menu</a></li>
+                <li>
+                    <a href="#">Menu</a>
+                    <div class="flyout">
+                        <a href="#">Item 1</a>
+                        <a href="#">Item 2</a>
+                        <a href="#">Item 3</a>
+                    </div>
+                </li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Shop</a></li>
             </ul>
@@ -147,6 +180,7 @@
     </div>
 </body>
 </html>
+
 
 
 
