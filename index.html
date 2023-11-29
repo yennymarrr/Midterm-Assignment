@@ -44,6 +44,7 @@
         }
 
         .hero-image {
+            position: relative;
             background-image: url(Cafe.jpg);
             background-size: cover;
             background-position: center;
@@ -53,6 +54,16 @@
             justify-content: center;
             color: rgb(9, 7, 7);
             text-align: center;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
         }
 
         .menu-section {
@@ -109,6 +120,7 @@
     </header>
 
     <div class="hero-image">
+        <div class="hero-text">Bringing home to you</div>
     </div>
 
     <div class="menu-section">
@@ -130,6 +142,7 @@
     </div>
 </body>
 </html>
+
 
 
 
