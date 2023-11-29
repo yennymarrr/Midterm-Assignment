@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <style>
-          header {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: rgb(218, 195, 141);
+            background-color: rgb(112, 98, 65);
         }
 
         .logo img {
@@ -34,7 +34,7 @@
 
         nav a {
             text-decoration: none;
-            color: blue;
+            color: pink;
             font-weight: bold;
             font-size: 16px;
         }
@@ -56,21 +56,39 @@
         }
 
         .menu-section {
-          text-align: center;
-          padding: 20px;
+            text-align: center;
+            padding: 20px;
+            color: pink;
+        }
+
+        .top-picks {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
 
         .menu-images {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            margin-top: 20px;
+            text-align: center;
+            width: 30%;
         }
 
         .menu-images img {
-            max-width: 30%;
+            max-width: 100%;
             margin: 10px;
+            border-radius: 8px; /* Adding rounded corners for a nicer look */
         }
 
+        .menu-text {
+            margin-top: 10px;
+        }
     </style>
     <title>Azalea's Latin Cafe</title>
 </head>
@@ -94,12 +112,25 @@
     </div>
 
     <div class="menu-section">
-      <h2>Menu<h2>
-          <div class="menu-images">
-          <img src="Images/CancunCafe.jpg" alt="Menu Image 1">
-          <img src="Images/MatchaCoffee.jpg" alt="Menu Image 2">
-          <img src="Images/PinkCoffee.jpg" alt="Menu Image 3">
+        <h2 class="top-picks">Top Picks</h2>
+        <div class="menu-images">
+            <div class="menu-item">
+                <img src="Images/CancunCafe.jpg" alt="Menu Image 1">
+                <div class="menu-text">Guatemalan Cafe</div>
+            </div>
+            <div class="menu-item">
+                <img src="Images/MatchaCoffee.jpg" alt="Menu Image 2">
+                <div class="menu-text">Peruvian Matcha Coffee</div>
+            </div>
+            <div class="menu-item">
+                <img src="Images/PinkCoffee.jpg" alt="Menu Image 3">
+                <div class="menu-text">Strawberry Horchata Coffee</div>
+            </div>
+        </div>
     </div>
-
 </body>
 </html>
+
+
+
+
